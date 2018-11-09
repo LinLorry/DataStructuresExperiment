@@ -1,15 +1,16 @@
 //
-// Created by lorry on 10/24/18.
+// Created by lorry on 11/9/18.
 //
+
 #include <iostream>
-#include <assert.h>
+#include <cassert>
 using namespace std;
 
-#include "../include/SqList/ex3_1_Text.h"
+#include "../include/LinkList/ex3_2_Text.h"
 
 int main()
 {
-    MySqList<int> mySqList;
+    MyLinkList<int> myLinkList;
 
     int choose;
     char continueYesNo = 'N';
@@ -36,8 +37,8 @@ int main()
         cout << "\t\t14.两个顺序表的并交差运算" << endl;
         cout << "\t\t15.学生信息管理（顺序表的应用）" << endl;
         cout << "\t\t\t其他.结束" << endl << endl;
-        cout << "////////////////////////////////////////////////////////" << endl;
-        displayCurrentObject(mySqList);
+        cout << "////////////////////////////////////////////////////////" << endl << endl;
+        displayCurrentObject(myLinkList);
         cout << "////////////////////////////////////////////////////////" << endl << endl;
 
         cout << "\t请输入你要操作的代码（1-15）号码：";
@@ -46,52 +47,52 @@ int main()
         if (choose > 0 && choose < 16)
         {
             system("clear");
-            displayCurrentObject(mySqList);
+            displayCurrentObject(myLinkList);
         }
 
-        switch (choose)
+        /*switch (choose)
         {
             case 1:
-                ex3_1_1(mySqList, continueYesNo);
+                ex3_1_1(myLinkList, continueYesNo);
                 break;
             case 2:
-                ex3_1_2(mySqList, continueYesNo);
+                ex3_1_2(myLinkList, continueYesNo);
                 break;
             case 3:
-                ex3_1_3(mySqList, continueYesNo);
+                ex3_1_3(myLinkList, continueYesNo);
                 break;
             case 4:
-                ex3_1_4(mySqList, continueYesNo);
+                ex3_1_4(myLinkList, continueYesNo);
                 break;
             case 5:
-                ex3_1_5(mySqList, continueYesNo);
+                ex3_1_5(myLinkList, continueYesNo);
                 break;
             case 6:
-                ex3_1_6(mySqList, continueYesNo);
+                ex3_1_6(myLinkList, continueYesNo);
                 break;
             case 7:
-                ex3_1_7(mySqList, continueYesNo);
+                ex3_1_7(myLinkList, continueYesNo);
                 break;
             case 8:
-                ex3_1_8(mySqList, continueYesNo);
+                ex3_1_8(myLinkList, continueYesNo);
                 break;
             case 9:
-                ex3_1_9(mySqList, continueYesNo);
+                ex3_1_9(myLinkList, continueYesNo);
                 break;
             case 10:
-                ex3_1_10(mySqList, continueYesNo);
+                ex3_1_10(myLinkList, continueYesNo);
                 break;
             case 11:
-                ex3_1_11(mySqList, continueYesNo);
+                ex3_1_11(myLinkList, continueYesNo);
                 break;
             case 12:
-                ex3_1_12(mySqList, continueYesNo);
+                ex3_1_12(myLinkList, continueYesNo);
                 break;
             case 13:
-                ex3_1_13(mySqList, continueYesNo);
+                ex3_1_13(myLinkList, continueYesNo);
                 break;
             case 14:
-                ex3_1_14(mySqList, continueYesNo);
+                ex3_1_14(myLinkList, continueYesNo);
                 break;
             case 15:
                 ex3_1_15(continueYesNo);
@@ -99,7 +100,7 @@ int main()
             default:
                 cout << "" << endl << endl;
                 return 1;
-        }
+        }*/
 
         if (continueYesNo == 'N' || continueYesNo == 'n')
             break;
@@ -107,4 +108,3 @@ int main()
 
     return 1;
 }
-

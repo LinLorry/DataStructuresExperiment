@@ -5,14 +5,6 @@
 #define ERROR false
 #define OK true
 
-Status equal(int i, int j)
-{
-    if(i == j)
-        return OK;
-    else
-        return ERROR;
-}
-
 template <typename ElemType>
 Status equal(ElemType i, ElemType j)
 {

@@ -3,11 +3,7 @@
 #include <assert.h>
 using namespace std;
 
-#include "../include/MyExampleClass.h"
-#include "../include/SqList.h"
-#include "../include/MySqList.h"
-#include "../include/MySetSqList.h"
-#include "../include/ex2_1_Text.h"
+#include "../include/Rectangle/ex2_1_Text.h"
 
 int main()
 {

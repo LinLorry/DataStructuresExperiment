@@ -1,4 +1,4 @@
-#include "myhead.h"
+#include "../myhead.h"
 
 #ifndef ALGORITHM_SQLIST_H
 #define ALGORITHM_SQLIST_H
