@@ -38,7 +38,7 @@ int main()
         cout << "\t\t15.学生信息管理（顺序表的应用）" << endl;
         cout << "\t\t\t其他.结束" << endl << endl;
         cout << "////////////////////////////////////////////////////////" << endl << endl;
-        displayCurrentObject(myLinkList);
+        displayMessage(myLinkList);
         cout << "////////////////////////////////////////////////////////" << endl << endl;
 
         cout << "\t请输入你要操作的代码（1-15）号码：";
@@ -47,60 +47,63 @@ int main()
         if (choose > 0 && choose < 16)
         {
             system("clear");
-            displayCurrentObject(myLinkList);
+            displayMessage(myLinkList);
         }
 
-        /*switch (choose)
+        switch (choose)
         {
             case 1:
-                ex3_1_1(myLinkList, continueYesNo);
+                ex3_2_1(myLinkList, continueYesNo);
                 break;
             case 2:
-                ex3_1_2(myLinkList, continueYesNo);
+                ex3_2_2(myLinkList, continueYesNo);
                 break;
             case 3:
-                ex3_1_3(myLinkList, continueYesNo);
+                ex3_2_3(myLinkList, continueYesNo);
                 break;
             case 4:
-                ex3_1_4(myLinkList, continueYesNo);
+                ex3_2_4(myLinkList, continueYesNo);
                 break;
             case 5:
-                ex3_1_5(myLinkList, continueYesNo);
+                ex3_2_5(myLinkList, continueYesNo);
                 break;
             case 6:
-                ex3_1_6(myLinkList, continueYesNo);
+                ex3_2_6(myLinkList, continueYesNo);
                 break;
             case 7:
-                ex3_1_7(myLinkList, continueYesNo);
+                ex3_2_7(myLinkList, continueYesNo);
                 break;
             case 8:
-                ex3_1_8(myLinkList, continueYesNo);
+                ex3_2_8(myLinkList, continueYesNo);
                 break;
             case 9:
-                ex3_1_9(myLinkList, continueYesNo);
+                ex3_2_9(myLinkList, continueYesNo);
                 break;
             case 10:
-                ex3_1_10(myLinkList, continueYesNo);
+                ex3_2_10(myLinkList, continueYesNo);
                 break;
             case 11:
-                ex3_1_11(myLinkList, continueYesNo);
+                ex3_2_11(myLinkList, continueYesNo);
                 break;
             case 12:
-                ex3_1_12(myLinkList, continueYesNo);
+                ex3_2_12(myLinkList, continueYesNo);
                 break;
             case 13:
-                ex3_1_13(myLinkList, continueYesNo);
+                ex3_2_13(myLinkList, continueYesNo);
                 break;
             case 14:
-                ex3_1_14(myLinkList, continueYesNo);
+                ex3_2_14(myLinkList, continueYesNo);
                 break;
             case 15:
-                ex3_1_15(continueYesNo);
+                ex3_2_15(myLinkList, continueYesNo);
+                break;
+            case 16:
+                ex3_2_16(myLinkList, continueYesNo);
                 break;
             default:
                 cout << "" << endl << endl;
                 return 1;
-        }*/
+        }
 
         if (continueYesNo == 'N' || continueYesNo == 'n')
             break;
