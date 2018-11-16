@@ -48,6 +48,7 @@ int main()
         {
             system("clear");
             displayMessage(myLinkList);
+            cout << endl << endl;
         }
 
         switch (choose)

@@ -39,7 +39,7 @@ void displayMessage(MyLinkList<ElemType> myLinkList)
 }
 
 template <typename ElemType>
-void ex3_2_1(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_1(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     int i;
     ElemType e;
@@ -66,7 +66,7 @@ void ex3_2_1(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_2(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_2(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
 
     int i;
@@ -93,7 +93,7 @@ void ex3_2_2(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_3(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_3(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     cout << "\t*******************判断非循环单链表是否为空*******************" << endl << endl;
     if (!myLinkList.isEmpty())
@@ -107,7 +107,7 @@ void ex3_2_3(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_4(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_4(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     cout << "\t*******************求非循环单链表中元素的个数*******************" << endl << endl;
     cout << "\t\t非循环单链表元素的个数为：" << myLinkList.getLength() << endl << endl;
@@ -118,7 +118,7 @@ void ex3_2_4(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_5(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_5(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     int i;
     ElemType e;
@@ -158,7 +158,7 @@ void ex3_2_5(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 
 
 template <typename ElemType>
-void ex3_2_6(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_6(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     ElemType i, j;
 
@@ -179,7 +179,7 @@ void ex3_2_6(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_7(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_7(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     ElemType i, j;
 
@@ -199,7 +199,7 @@ void ex3_2_7(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_8(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_8(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     ElemType e;
 
@@ -227,7 +227,7 @@ void ex3_2_8(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_9(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_9(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     cout << "\t*******************删除*******************" << endl << endl;
 
@@ -241,7 +241,7 @@ void ex3_2_9(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_10(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_10(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     cout << "\t*******************删除*******************" << endl << endl;
 
@@ -256,7 +256,7 @@ void ex3_2_10(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_11(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_11(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     default_random_engine engine;
     uniform_int_distribution<unsigned> uniform(0, 100);
@@ -277,7 +277,7 @@ void ex3_2_11(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_12(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_12(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     cout << "\t*******************把当前非循环单链表置空******************" << endl << endl;
 
@@ -291,7 +291,7 @@ void ex3_2_12(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_13(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_13(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     default_random_engine engine;
     uniform_int_distribution<unsigned> uniform(0, 100);
@@ -318,7 +318,7 @@ void ex3_2_13(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_14(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_14(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     MyLinkList<ElemType> otherLinkList = MyLinkList<ElemType>(myLinkList);
 
@@ -358,7 +358,7 @@ void ex3_2_15(MyLinkList<ElemType> myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_16(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_16(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     int choose;
 

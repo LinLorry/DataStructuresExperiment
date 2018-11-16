@@ -169,21 +169,26 @@ int LinkList<ElemType>::getLength()
 template <typename ElemType>
 Status LinkList<ElemType>::insert(int i, ElemType e)
 {
-    int j = 0;
-    NodePointer p = head;
+    LinkNode linkNode;
+    NodePointer p = &linkNode, q = &linkNode;
     NodePointer s;
 
-    if (i < 1)
+    //if input i is error return ERROR.
+    if (i < 1 || (i!=1 && !head))
         return ERROR;
 
-    while (p && j<i-1)
-        ++j, p = p->next;
+    //make linkNode next is head and move p to be location before insert.
+    p->next = head;
+    while (i-->1)
+        p = p->next;
 
     s = new LinkNode();
+    assert(s!=0);
     s->data = e;
 
     s->next = p->next;
     p->next = s;
+    head = q->next;
 
     return OK;
 
@@ -220,7 +225,7 @@ Status LinkList<ElemType>::insert(int i, ElemType e)
 template <typename ElemType>
 bool LinkList<ElemType>::isEmpty()
 {
-    return (head? false:true);
+    return head!=NULL;
 }
 
 template <typename ElemType>
@@ -264,6 +269,8 @@ LinkList<ElemType> LinkList<ElemType>::operator=(LinkList<ElemType> rightL)
     if(this != &rightL)
     {
         clear();
+        p = NULL;
+
         while (rp)
         {
             s = new LinkNode;
@@ -271,13 +278,13 @@ LinkList<ElemType> LinkList<ElemType>::operator=(LinkList<ElemType> rightL)
 
             s->data = rp->data;
 
-            if (!head)
-                head = s;
+            if (p == NULL)
+                head = p = s;
             else
+            {
                 p->next = s;
-
-            p = s;
-            p = p->next;
+                p = p->next;
+            }
         }
 
         if (p)
@@ -304,11 +311,7 @@ Status LinkList<ElemType>::priorElem(ElemType e, ElemType &prior_e)
 }
 
 template <typename ElemType>
-LinkList<ElemType>::LinkList()
-{
-    head = new LinkNode();
-    assert(head!=0);
-}
+LinkList<ElemType>::LinkList() { head = NULL; }
 
 template <typename ElemType>
 LinkList<ElemType>::~LinkList() { clear(); }
