@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 #include "MySetSqList.h"
-#include "../Student_SqList.h"
+#include "Student_SqList.h"
 
 #ifndef ALGORITHM_EX3_1_TEXT_H
 #define ALGORITHM_EX3_1_TEXT_H

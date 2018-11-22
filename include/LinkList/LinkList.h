@@ -27,23 +27,25 @@ public:
 
     void deleteRepeat();
 
-    Status getElem(int i, ElemType & e);
+    Status getElem(int i, ElemType & e) const;
 
-    NodePointer getHead();
+    NodePointer getElem(int i) const;
 
-    int getLength();
+    NodePointer getHead() const;
+
+    int getLength() const;
 
     Status insert(int i, ElemType e);
 
-    bool isEmpty();
+    bool isEmpty() const;
 
-    Status locateElem(ElemType e, Status (*compare)(ElemType, ElemType), int & i);
+    Status locateElem(ElemType e, Status (*compare)(ElemType, ElemType), int & i) const;
 
-    Status nextElem(ElemType e, ElemType & next_e);
+    Status nextElem(ElemType e, ElemType & next_e) const;
+    Status priorElem(ElemType e, ElemType & prior_e) const;
 
-    LinkList<ElemType> operator= (LinkList<ElemType> rightL);
-
-    Status priorElem(ElemType e, ElemType & prior_e);
+    LinkList<ElemType> & operator= (const LinkList<ElemType> & rightL);
+    LinkList<ElemType> & operator= (LinkList<ElemType> && rightL);
 
     LinkList();
     virtual  ~LinkList();
@@ -133,7 +135,7 @@ void LinkList<ElemType>::deleteRepeat()
 }
 
 template <typename ElemType>
-Status LinkList<ElemType>::getElem(int i, ElemType & e)
+Status LinkList<ElemType>::getElem(int i, ElemType & e) const
 {
     int j = 1;
     NodePointer p = head;
@@ -148,14 +150,25 @@ Status LinkList<ElemType>::getElem(int i, ElemType & e)
     return OK;
 }
 
-template <typename ElemType>
-typename LinkList<ElemType>::LinkNode* LinkList<ElemType>::getHead()
+template  <typename ElemType>
+typename LinkList<ElemType>::NodePointer LinkList<ElemType>::getElem(int i) const
 {
-    return head;
+    NodePointer p = head;
+
+    while (--i>0 && p)
+        p = p->next;
+
+    if(!p)
+        return NULL;
+
+    return p;
 }
 
 template <typename ElemType>
-int LinkList<ElemType>::getLength()
+typename LinkList<ElemType>::NodePointer LinkList<ElemType>::getHead() const { return head; }
+
+template <typename ElemType>
+int LinkList<ElemType>::getLength() const
 {
     int n = 0;
     NodePointer p = head;
@@ -179,8 +192,11 @@ Status LinkList<ElemType>::insert(int i, ElemType e)
 
     //make linkNode next is head and move p to be location before insert.
     p->next = head;
-    while (i-->1)
+    while (i-->1 && p)
         p = p->next;
+
+    if (!p || i>1)
+        return ERROR;
 
     s = new LinkNode();
     assert(s!=0);
@@ -223,13 +239,10 @@ Status LinkList<ElemType>::insert(int i, ElemType e)
 }
 
 template <typename ElemType>
-bool LinkList<ElemType>::isEmpty()
-{
-    return head!=NULL;
-}
+bool LinkList<ElemType>::isEmpty() const { return head!=NULL; }
 
 template <typename ElemType>
-Status LinkList<ElemType>::locateElem(ElemType e, Status (*compare) (ElemType, ElemType), int &i)
+Status LinkList<ElemType>::locateElem(ElemType e, Status (*compare) (ElemType, ElemType), int &i) const
 {
     NodePointer p = head;
     i = 1;
@@ -243,7 +256,7 @@ Status LinkList<ElemType>::locateElem(ElemType e, Status (*compare) (ElemType, E
 }
 
 template <typename ElemType>
-Status LinkList<ElemType>::nextElem(ElemType e, ElemType &next_e)
+Status LinkList<ElemType>::nextElem(ElemType e, ElemType &next_e) const
 {
     NodePointer p = head;
 
@@ -259,43 +272,7 @@ Status LinkList<ElemType>::nextElem(ElemType e, ElemType &next_e)
 }
 
 template <typename ElemType>
-LinkList<ElemType> LinkList<ElemType>::operator=(LinkList<ElemType> rightL)
-{
-    NodePointer p = NULL;
-    NodePointer rp = rightL.getHead();
-
-    NodePointer s;
-
-    if(this != &rightL)
-    {
-        clear();
-        p = NULL;
-
-        while (rp)
-        {
-            s = new LinkNode;
-            assert(s != 0);
-
-            s->data = rp->data;
-
-            if (p == NULL)
-                head = p = s;
-            else
-            {
-                p->next = s;
-                p = p->next;
-            }
-        }
-
-        if (p)
-            p->next = NULL;
-    }
-
-    return *this;
-}
-
-template <typename ElemType>
-Status LinkList<ElemType>::priorElem(ElemType e, ElemType &prior_e)
+Status LinkList<ElemType>::priorElem(ElemType e, ElemType &prior_e) const
 {
     NodePointer r = NULL;
     NodePointer p = head;
@@ -311,13 +288,103 @@ Status LinkList<ElemType>::priorElem(ElemType e, ElemType &prior_e)
 }
 
 template <typename ElemType>
+LinkList<ElemType> & LinkList<ElemType>::operator=(const LinkList<ElemType> & rightL)
+{
+    NodePointer p, s;
+    NodePointer rp = rightL.getHead();
+
+    clear();
+
+    while (rp)
+    {
+        s = new LinkNode();
+        assert(s!=0);
+        s->data = rp->data;
+
+        if(!head)
+        {
+            head = p = s;
+        }
+        else
+        {
+            p->next = s;
+            p = p->next;
+        }
+        rp = rp->next;
+    }
+
+    if(p)
+        p->next = NULL;
+
+    return *this;
+
+
+    /*NodePointer q = new LinkNode();
+    assert(q!=0);
+
+    NodePointer p = q;
+    NodePointer rp = rightL.head;
+
+    NodePointer s;
+
+    clear();
+
+    while (rp)
+    {
+        s = new LinkNode();
+        assert(s!=0);
+        s->data = rp->data;
+
+        p->next = s;
+        p = p->next;
+        rp = rp->next;
+    }
+    p->next = NULL;
+
+    head = q->next;
+
+    return *this;*/
+}
+
+template <typename ElemType>
+LinkList<ElemType>& LinkList<ElemType>::operator=(LinkList<ElemType> &&rightL)
+{
+    NodePointer q = new LinkNode();
+    assert(q!=0);
+
+    NodePointer p = q;
+    NodePointer rp = rightL.head;
+
+    NodePointer s;
+
+    clear();
+
+    while (rp)
+    {
+        s = new LinkNode();
+        assert(s!=0);
+        s->data = rp->data;
+        rp = rp->next;
+        p->next = s;
+        p = p->next;
+    }
+    p->next = NULL;
+
+    head = q->next;
+
+    return *this;
+}
+
+
+
+template <typename ElemType>
 LinkList<ElemType>::LinkList() { head = NULL; }
 
 template <typename ElemType>
 LinkList<ElemType>::~LinkList() { clear(); }
 
 template <typename ElemType>
-LinkList<ElemType>::LinkList(const LinkList<ElemType> & otherL)
+LinkList<ElemType>::LinkList(const LinkList<ElemType> &otherL)
 {
     NodePointer p;
     NodePointer op = otherL.head;
@@ -342,7 +409,7 @@ LinkList<ElemType>::LinkList(const LinkList<ElemType> & otherL)
         op = op->next;
     }
 
-    if (head)
+    if (head && p!=NULL)
         p->next = NULL;
 }
 
