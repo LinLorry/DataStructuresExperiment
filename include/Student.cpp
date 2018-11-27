@@ -96,7 +96,6 @@ Student::~Student() {}
 
 ostream & operator<< (ostream & out, const Student & stu)
 {
-stu.display(out);
-return out;
+    stu.display(out);
+    return out;
 }
-

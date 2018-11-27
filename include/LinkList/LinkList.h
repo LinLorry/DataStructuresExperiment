@@ -25,6 +25,8 @@ public:
 
     Status deleteElem(ElemType e);
 
+    Status removeElem(int i);
+
     void deleteRepeat();
 
     Status getElem(int i, ElemType & e) const;
@@ -108,6 +110,29 @@ Status LinkList<ElemType>::deleteElem(ElemType e)
 
     free(p);
     return OK;
+}
+
+template <typename ElemType>
+Status LinkList<ElemType>::removeElem(int i)
+{
+    NodePointer r = NULL, p = head;
+
+    if (i<1)
+        return ERROR;
+
+    while (p && --i)
+        r = p, p = p->next;
+
+    if(p == NULL)
+        return ERROR;
+    if(r == NULL)
+        head = head->next;
+    else
+        r->next = p->next;
+
+    free(p);
+    return OK;
+
 }
 
 template <typename ElemType>
@@ -290,6 +315,9 @@ Status LinkList<ElemType>::priorElem(ElemType e, ElemType &prior_e) const
 template <typename ElemType>
 LinkList<ElemType> & LinkList<ElemType>::operator=(const LinkList<ElemType> & rightL)
 {
+    if(&rightL == this)
+        return *this;
+
     NodePointer p, s;
     NodePointer rp = rightL.getHead();
 
@@ -349,7 +377,38 @@ LinkList<ElemType> & LinkList<ElemType>::operator=(const LinkList<ElemType> & ri
 template <typename ElemType>
 LinkList<ElemType>& LinkList<ElemType>::operator=(LinkList<ElemType> &&rightL)
 {
-    NodePointer q = new LinkNode();
+    if(&rightL == this)
+        return *this;
+
+    NodePointer p, s;
+    NodePointer rp = rightL.getHead();
+
+    clear();
+
+    while (rp)
+    {
+        s = new LinkNode();
+        assert(s!=0);
+        s->data = rp->data;
+
+        if(!head)
+        {
+            head = p = s;
+        }
+        else
+        {
+            p->next = s;
+            p = p->next;
+        }
+        rp = rp->next;
+    }
+
+    if(p)
+        p->next = NULL;
+
+    return *this;
+
+    /*NodePointer q = new LinkNode();
     assert(q!=0);
 
     NodePointer p = q;
@@ -372,13 +431,13 @@ LinkList<ElemType>& LinkList<ElemType>::operator=(LinkList<ElemType> &&rightL)
 
     head = q->next;
 
-    return *this;
+    return *this;*/
 }
 
 
 
 template <typename ElemType>
-LinkList<ElemType>::LinkList() { head = NULL; }
+LinkList<ElemType>::LinkList()=default;
 
 template <typename ElemType>
 LinkList<ElemType>::~LinkList() { clear(); }

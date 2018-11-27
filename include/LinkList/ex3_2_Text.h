@@ -5,26 +5,27 @@
 #include <random>
 
 #include "MyLinkList.h"
+#include "Term_LinkList.h"
 
 #ifndef ALGORITHM_EX3_2_TEXT_H
 #define ALGORITHM_EX3_2_TEXT_H
 
 template <typename ElemType>
-void displayCurrentObject(MyLinkList<ElemType> myLinkList)
+void displayCurrentObject(MyLinkList<ElemType> & myLinkList)
 {
-    int i;
-    typename  LinkList<ElemType>::NodePointer pointer;
+    typename  LinkList<ElemType>::NodePointer pointer = myLinkList.getHead();
 
     cout << "\t\t";
-    for(i = 1; i <= myLinkList.getLength(); ++i)
+    for(int i = 1; i <= myLinkList.getLength(); ++i)
         cout << "[" << i << "]\t\t";
 
     cout << endl << "\t\t";
-    for(i=1; i <= myLinkList.getLength(); ++i)
+
+    while(pointer)
     {
-        pointer = myLinkList.getElem(i);
         cout << pointer->data;
-        if (pointer->next)
+        pointer = pointer->next;
+        if (pointer)
             cout << "\t->\t";
         else
             cout << "\t^\t";
@@ -32,14 +33,12 @@ void displayCurrentObject(MyLinkList<ElemType> myLinkList)
 }
 
 template <typename ElemType>
-void displayMessage(MyLinkList<ElemType> myLinkList)
+void displayMessage(MyLinkList<ElemType> & myLinkList)
 {
     if (myLinkList.getLength() == 0)
-        cout << "当前循环单链表为空。" << endl;
+        cout << "\t\t当前循环单链表为空。" << endl;
     else
-    {
         displayCurrentObject(myLinkList);
-    }
 }
 
 template <typename ElemType>
@@ -337,7 +336,7 @@ void ex3_2_14(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 }
 
 template <typename ElemType>
-void ex3_2_15(MyLinkList<ElemType> myLinkList, char & continueYesNo)
+void ex3_2_15(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     int n;
     ElemType e;
@@ -362,10 +361,10 @@ void ex3_2_15(MyLinkList<ElemType> myLinkList, char & continueYesNo)
     cin >> continueYesNo;
 }
 
-template <typename ElemType>
-void ex3_2_16(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
+void ex3_2_16(char & continueYesNo)
 {
     int choose;
+    MyLinkList<Term> termLinkList;
 
     while (true)
     {
@@ -375,17 +374,18 @@ void ex3_2_16(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 
         cout << endl;
         cout << "\t*******************多项式的运算（非循环单链表的应用）******************" << endl << endl;
-        cout << "\t\t1.在第i个学生之前插入一个学生" << endl;
-        cout << "\t\t2.判断学生表是否为空" << endl;
-        cout << "\t\t3.求学生表中学生的个数" << endl;
-        cout << "\t\t4.返回第i个学生" << endl;
-        cout << "\t\t5.返回某个学生的前驱" << endl;
-        cout << "\t\t6.返回某个学生的后继" << endl;
-        cout << "\t\t7.删除第i个学生" << endl;
-        cout << "\t\t8.把一个学生表赋值给另一个学生表" << endl;
+        cout << "\t\t1.判断多项式是否为空" << endl;
+        cout << "\t\t2.把一个多项式赋值给另一个多项式" << endl;
+        cout << "\t\t3.两个多项式的加法" << endl;
+        cout << "\t\t4.两个多项式的减法" << endl;
+        cout << "\t\t5.设置多项式为空多项式" << endl;
+        cout << "\t\t6.随机生成多项式" << endl;
+        cout << "\t\t7.用已有的多项式初始化另一个多项式" << endl;
+        cout << "\t\t8.输入多项式" << endl;
         cout << "\t\t\t其他.结束" << endl << endl;
         cout << "////////////////////////////////////////////////////////" << endl << endl;
-        displayMessage(myLinkList);
+        displayMessage(termLinkList);
+        cout << endl << endl;
         cout << "////////////////////////////////////////////////////////" << endl << endl;
 
         cout << "\t请输入你要操作的代码（1-8）号码：";
@@ -395,51 +395,40 @@ void ex3_2_16(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
         {
             system("clear");
             cout << endl;
-            displayMessage(myLinkList);
-            cout << endl;
+            displayMessage(termLinkList);
+            cout << endl << endl;
         }
 
-        /*switch (choose)
+        switch (choose)
         {
             case 1:
-                ex3_1_15_1(myLinkList, continueYesNo);
+                ex3_2_16_1(termLinkList, continueYesNo);
                 break;
             case 2:
-                ex3_1_15_2(myLinkList, continueYesNo);
+                ex3_2_16_2(termLinkList, continueYesNo);
                 break;
             case 3:
-                ex3_1_15_3(myLinkList, continueYesNo);
+                ex3_2_16_3(termLinkList, continueYesNo);
                 break;
             case 4:
-                ex3_1_15_4(myLinkList, continueYesNo);
+                ex3_2_16_4(termLinkList, continueYesNo);
                 break;
             case 5:
-                ex3_1_15_5(myLinkList, continueYesNo);
+                ex3_2_16_5(termLinkList, continueYesNo);
                 break;
             case 6:
-                ex3_1_15_6(myLinkList, continueYesNo);
+                ex3_2_16_6(termLinkList, continueYesNo);
                 break;
             case 7:
-                ex3_1_15_7(myLinkList, continueYesNo);
+                ex3_2_16_7(termLinkList, continueYesNo);
                 break;
             case 8:
-                ex3_1_15_8(myLinkList, continueYesNo);
+                ex3_2_16_8(termLinkList, continueYesNo);
                 break;
-            case 9:
-                ex3_1_15_9(myLinkList, continueYesNo);
-                break;
-            case 10:
-                ex3_1_15_10(myLinkList, continueYesNo);
-                break;
-            case 11:
-                ex3_1_15_11(myLinkList, continueYesNo);
-                break;
-            case 12:
-                ex3_1_15_12(myLinkList, continueYesNo);
             default:
                 cout << "" << endl << endl;
                 break;
-        }*/
+        }
 
         if (continueYesNo == 'N' || continueYesNo == 'n')
         {

@@ -101,7 +101,7 @@ int main()
                 ex3_2_15(myLinkList, continueYesNo);
                 break;
             case 16:
-                ex3_2_16(myLinkList, continueYesNo);
+                ex3_2_16(continueYesNo);
                 break;
             default:
                 cout << "" << endl << endl;
