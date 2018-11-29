@@ -3,4 +3,8 @@ project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Algorithm include/Term.cpp res/LinkList_main.cpp include/LinkList/Term_LinkList.h include/Term.h )
+add_executable(Algorithm res/LinkList_main.cpp /
+                        res/LinkList/LinkList.h res/LinkList/MyLinkList.h /
+                        res/LinkList/Term_LinkList.cpp res/LinkList/Term_LinkList.h /
+                        res/LinkList/ex3_2_Text.h /
+                        res/Models/Term.cpp res/Models/Term.h include/myhead.cpp)

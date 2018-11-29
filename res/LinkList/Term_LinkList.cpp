@@ -1,25 +1,21 @@
 //
-// Created by lorry on 11/23/18.
+// Created by lorry on 11/29/18.
 //
 
 #include <random>
 
-#include "../Term.h"
-
-#ifndef ALGORITHM_MYTERM_LINKLIST_H
-#define ALGORITHM_MYTERM_LINKLIST_H
-
-extern ostream & operator<< (ostream & out, const Term & term);
+#include "Term_LinkList.h"
+#include "../Models/Term.h"
 
 void displayCurrentObject(MyLinkList<Term> & termLinkList)
 {
-    cout << "\t\t" << endl;
+    cout << "\t\t";
     MyLinkList<Term>::NodePointer pointer = termLinkList.getHead();
     while(pointer)
     {
         cout << pointer->data;
         pointer = pointer->next;
-        if (pointer)
+        if (pointer&&pointer->data.getExpn()>=0)
             cout << "+";
     }
 }
@@ -82,36 +78,41 @@ void termSubTerm(MyLinkList<Term> & t_1, const MyLinkList<Term> & t_2)
     {
         if(p && q)
         {
-            if (q->data.getCoef()==p->data.getCoef())
+            if (p->data.getCoef() == q->data.getCoef())
             {
-                q->data.setExpn(q->data.getExpn() - p->data.getExpn());
-                if (q->data.getExpn() == 0)
+                p->data.setExpn(p->data.getExpn() - q->data.getExpn());
+                if (p->data.getExpn() == 0)
                 {
                     t_1.removeElem(i--);
                 }
-                q = t_1.getElem(++i);
-                p = t_2.getElem(++j);
+                p = t_1.getElem(++i);
+                q = t_2.getElem(++j);
             }
-
-            else if (q->data.getCoef() < p->data.getCoef())
+            else if (p->data.getCoef() < q->data.getCoef())
             {
-                t_1.insert(i++, p->data);
-                p = t_2.getElem(++j);
+                t_1.insert(i, q->data);
+                p = t_1.getElem(i);
+                p->data.setExpn(-p->data.getExpn());
+                p = p->next;
+                ++i;
+                q = t_2.getElem(++j);
             }
             else
             {
-                q = t_1.getElem(++i);
+                p = t_1.getElem(++i);
             }
         }
         else if (!p)
         {
-            t_1.insert(i++, q->data);
+            t_1.insert(i, q->data);
+            p = t_1.getElem(i);
+            p->data.setExpn(-p->data.getExpn());
+            p = p->next;
+            ++i;
             q = t_2.getElem(++j);
         }
         else
-        {
-            q = t_1.getElem(++i);
-        }
+            break;
     }
 }
 
@@ -130,21 +131,22 @@ void ex3_2_16_1(MyLinkList<Term> & termList, char & continueYesNo)
 
 void ex3_2_16_2(MyLinkList<Term> & termList, char & continueYesNo)
 {
-    default_random_engine engine;
     uniform_int_distribution<unsigned> uniform_expn(1, 100);
+    uniform_int_distribution<unsigned> uniform_coef(1, 10);
     MyLinkList<Term> otherTermList;
 
-    for (int i=4; i>0; --i)
+    for (int i=6; i>0; --i)
     {
-        Term t = Term(uniform_expn(engine), i);
+        Term t = Term(uniform_expn(engine), uniform_coef(engine));
 
         otherTermList.insert(1, t);
     }
-    otherTermList.rankLinkList();
+    otherTermList.mergeRepeat();
 
     cout << "\t*******************把一个多项式赋值给另一个多项式******************" << endl << endl;
 
     termList = otherTermList;
+    cout << "\t\t另一个多项式赋值给当前多项式为：" << endl;
     displayCurrentObject(termList);
 
     cout << endl << "\t**************************************************" << endl << endl;
@@ -155,24 +157,27 @@ void ex3_2_16_2(MyLinkList<Term> & termList, char & continueYesNo)
 
 void ex3_2_16_3(MyLinkList<Term> & termList, char & continueYesNo)
 {
-    default_random_engine engine;
+
     uniform_int_distribution<unsigned> uniform_expn(1, 100);
+    uniform_int_distribution<unsigned> uniform_coef(1, 10);
     MyLinkList<Term> otherTermList;
 
-    for (int i=4; i>0; --i)
+    for (int i=6; i>0; --i)
     {
-        Term t = Term(uniform_expn(engine), i);
+        Term t = Term(uniform_expn(engine), uniform_coef(engine));
 
         otherTermList.insert(1, t);
     }
-    otherTermList.rankLinkList();
+    otherTermList.mergeRepeat();
 
     cout << "\t*******************两个多项式的加法******************" << endl << endl;
 
+    cout << "\t\t另一个多项式为：" << endl;
     displayCurrentObject(otherTermList);
 
     termAddTerm(termList, otherTermList);
 
+    cout << endl << "\t\t以上两个多项式相加，和为：" << endl;
     displayCurrentObject(termList);
 
     cout << endl << "\t**************************************************" << endl << endl;
@@ -183,24 +188,26 @@ void ex3_2_16_3(MyLinkList<Term> & termList, char & continueYesNo)
 
 void ex3_2_16_4(MyLinkList<Term> & termList, char & continueYesNo)
 {
-    default_random_engine engine;
     uniform_int_distribution<unsigned> uniform_expn(1, 100);
+    uniform_int_distribution<unsigned> uniform_coef(1, 10);
     MyLinkList<Term> otherTermList;
 
-    for (int i=4; i>0; --i)
+    for (int i=6; i>0; --i)
     {
-        Term t = Term(uniform_expn(engine), i);
+        Term t = Term(uniform_expn(engine), uniform_coef(engine));
 
         otherTermList.insert(1, t);
     }
-    otherTermList.rankLinkList();
+    otherTermList.mergeRepeat();
 
     cout << "\t*******************两个多项式的减法******************" << endl << endl;
 
+    cout << "\t\t另一个多项式为：" << endl;
     displayCurrentObject(otherTermList);
 
     termSubTerm(termList, otherTermList);
 
+    cout << endl << "\t\t以上两个多项式相减，差为：" << endl;
     displayCurrentObject(termList);
 
     cout << endl << "\t**************************************************" << endl << endl;
@@ -224,21 +231,28 @@ void ex3_2_16_5(MyLinkList<Term> & termList, char & continueYesNo)
 
 void ex3_2_16_6(MyLinkList<Term> & termList, char & continueYesNo)
 {
-    default_random_engine engine;
     uniform_int_distribution<unsigned> uniform_expn(1, 100);
+    uniform_int_distribution<unsigned> uniform_coef(1, 10);
+
+    int i = uniform_coef(engine);
 
     cout << "\t*******************随机生成多项式******************" << endl << endl;
 
     termList.clear();
 
-    for (int i=4; i>0; --i)
+    cout << "\t\t依次生成多项式如下" << i << "个项" << endl << "\t\t";
+    for (; i>0; --i)
     {
-        Term t = Term(uniform_expn(engine), i);
+        Term t = Term(uniform_expn(engine), uniform_coef(engine));
+        cout << t << "\t";
 
         termList.insert(1, t);
     }
-    termList.rankLinkList();
+    cout << endl << endl << "\t\t随机生成多项式为：" << endl;
+    termList.mergeRepeat();
 
+    displayCurrentObject(termList);
+    cout << endl;
     cout << endl << "\t**************************************************" << endl << endl;
 
     cout << "\t\t还继续吗（Y.继续 N.结束）？";
@@ -251,8 +265,9 @@ void ex3_2_16_7(MyLinkList<Term> & termList, char & continueYesNo)
 
     cout << "\t*******************用已有的多项式初始化另一个多项式******************" << endl << endl;
 
-    termList.clear();
-    cout << endl << "\t\t当前非循环单链表置空后，元素的个数为：" << termList.getLength() << endl << endl;
+    cout << "\t\t用当前多项式初始化另一个多项式为：" << endl;
+    displayCurrentObject(otherTermList);
+    cout << endl;
 
     cout << endl << "\t**************************************************" << endl << endl;
 
@@ -262,15 +277,32 @@ void ex3_2_16_7(MyLinkList<Term> & termList, char & continueYesNo)
 
 void ex3_2_16_8(MyLinkList<Term> & termList, char & continueYesNo)
 {
+    int num=0, expn, coef;
+    Term t;
     cout << "\t*******************输入多项式******************" << endl << endl;
 
-    termList.clear();
-    cout << endl << "\t\t当前非循环单链表置空后，元素的个数为：" << termList.getLength() << endl << endl;
+    cout << "\t\t请输入多项式的项数：";
+    cin >> num;
+    cout << "\t\t请输入多项式中的项：" << endl;
+    for(int i=1; i<=num; ++i)
+    {
+        cout << "\t\t\t第" << i << "项系数：";
+        cin >> expn;
+        cout << "\t\t\t\t指数：";
+        cin >> coef;
+
+        t.setExpn(expn);
+        t.setCoef(coef);
+
+        termList.insert(i, t);
+    }
+
+    termList.mergeRepeat();
+    cout << "\t\t当前循环单链表为：" << endl;
+    displayCurrentObject(termList);
 
     cout << endl << "\t**************************************************" << endl << endl;
 
     cout << "\t\t还继续吗（Y.继续 N.结束）？";
     cin >> continueYesNo;
 }
-
-#endif //ALGORITHM_MYTERM_LINKLIST_H

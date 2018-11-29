@@ -1,4 +1,4 @@
-#include "../myhead.h"
+#include "../../include/myhead.h"
 
 #ifndef ALGORITHM_SQLIST_H
 #define ALGORITHM_SQLIST_H
@@ -144,7 +144,7 @@ Status SqList<ElemType>::insert(int i, ElemType e)
 template <typename ElemType>
 bool SqList<ElemType>::isEmpty()
 {
-    return n==0 ? false : true;
+    return n!=0;
 }
 
 template <typename ElemType>

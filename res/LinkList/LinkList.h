@@ -2,7 +2,9 @@
 // Created by lorry on 11/9/18.
 //
 
-#include "../myhead.h"
+#include "../../include/myhead.h"
+#include <cassert>
+#include <iostream>
 
 #ifndef ALGORITHM_LINKLIST_H
 #define ALGORITHM_LINKLIST_H
@@ -318,7 +320,7 @@ LinkList<ElemType> & LinkList<ElemType>::operator=(const LinkList<ElemType> & ri
     if(&rightL == this)
         return *this;
 
-    NodePointer p, s;
+    NodePointer s, p = NULL;
     NodePointer rp = rightL.getHead();
 
     clear();
@@ -380,7 +382,7 @@ LinkList<ElemType>& LinkList<ElemType>::operator=(LinkList<ElemType> &&rightL)
     if(&rightL == this)
         return *this;
 
-    NodePointer p, s;
+    NodePointer s, p = NULL;
     NodePointer rp = rightL.getHead();
 
     clear();
@@ -437,7 +439,7 @@ LinkList<ElemType>& LinkList<ElemType>::operator=(LinkList<ElemType> &&rightL)
 
 
 template <typename ElemType>
-LinkList<ElemType>::LinkList()=default;
+LinkList<ElemType>::LinkList() { head = NULL; };
 
 template <typename ElemType>
 LinkList<ElemType>::~LinkList() { clear(); }

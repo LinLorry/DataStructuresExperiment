@@ -5,7 +5,7 @@
 #include <assert.h>
 using namespace std;
 
-#include "../include/SqList/ex3_1_Text.h"
+#include "SqList/ex3_1_Text.h"
 
 int main()
 {

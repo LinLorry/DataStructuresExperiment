@@ -1,7 +1,7 @@
 //
 // Created by lorry on 11/9/18.
 //
-#include "../Student.h"
+#include "../Models/Student.h"
 #ifndef ALGORITHM_STUDENT_SQLIST_H
 #define ALGORITHM_STUDENT_SQLIST_H
 

@@ -3,7 +3,6 @@
 //
 
 #include <random>
-
 #include "MyLinkList.h"
 #include "Term_LinkList.h"
 
@@ -17,7 +16,7 @@ void displayCurrentObject(MyLinkList<ElemType> & myLinkList)
 
     cout << "\t\t";
     for(int i = 1; i <= myLinkList.getLength(); ++i)
-        cout << "[" << i << "]\t\t";
+        cout << "[" << i << "]\t";
 
     cout << endl << "\t\t";
 
@@ -26,9 +25,9 @@ void displayCurrentObject(MyLinkList<ElemType> & myLinkList)
         cout << pointer->data;
         pointer = pointer->next;
         if (pointer)
-            cout << "\t->\t";
+            cout << "  ->\t";
         else
-            cout << "\t^\t";
+            cout << "^";
     }
 }
 
@@ -134,7 +133,7 @@ void ex3_2_5(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
     if ((myLinkList.locateElem(e, equal, i)))
         cout << "\t\t你想要查找第一个等于" << e << "的结点为：" << i << endl << endl;
     else
-        cout << "\t\t没有找到符合条件的结点！" << endl;
+        cout << "\t\t没有找到符合条件的结点！" << endl << endl;
 
 
     cout << "\t\t查找大于某个结点的操作" << endl;
@@ -143,7 +142,7 @@ void ex3_2_5(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
     if ((myLinkList.locateElem(e, bigger, i)))
         cout << "\t\t你想要查找第一个大于" << e << "的结点为：" << i << endl << endl;
     else
-        cout << "\t\t没有找到符合条件的结点！" << endl;
+        cout << "\t\t没有找到符合条件的结点！" << endl << endl;
 
 
     cout << "\t\t查找小于某个结点的操作" << endl;
@@ -152,7 +151,7 @@ void ex3_2_5(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
     if ((myLinkList.locateElem(e, smaller, i)))
         cout << "\t\t你想要查找第一个小于" << e << "的结点为：" << i << endl << endl;
     else
-        cout << "\t\t没有找到符合条件的结点！" << endl;
+        cout << "\t\t没有找到符合条件的结点！" << endl << endl;
 
     cout << endl << "\t**********************************************************************" << endl << endl;
 
@@ -209,11 +208,11 @@ void ex3_2_8(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 
     cout << "\t*******************删除非循环单链表中数据域为e的第一个结点*******************" << endl << endl;
 
-    cout << "\t\t请输入你想要删除元素的序号（1--" << myLinkList.getLength() << "）：";
+    cout << "\t\t请输入你想要删除元素的数据域：";
     cin >> e;
 
     if (myLinkList.deleteElem(e) == ERROR)
-        cout << "\t\t输入的序号有误！" << endl;
+        cout << "\t\t输入的数据有误！" << endl;
     else
     {
         if (myLinkList.getLength() == 0)
@@ -236,7 +235,13 @@ void ex3_2_9(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
     cout << "\t*******************删除非循环单链表中的重复结点*******************" << endl << endl;
 
     myLinkList.deleteRepeat();
-    displayCurrentObject(myLinkList);
+    if (myLinkList.getLength() == 0)
+        cout << "\t\t此循环单链表为空！";
+    else
+    {
+        cout << "\t\t删除重复元素后的循环单链表为：" << endl;
+        displayCurrentObject(myLinkList);
+    }
 
     cout << endl << "\t*************************************************" << endl << endl;
 
@@ -249,9 +254,15 @@ void ex3_2_10(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
     cout << "\t*******************非循环单链表的逆置*******************" << endl << endl;
 
-    myLinkList.adverse();
-    cout << "" << endl;
-    displayCurrentObject(myLinkList);
+    if (myLinkList.getLength() == 0)
+        cout << "\t\t此循环单链表为空！";
+    else
+    {
+        myLinkList.adverse();
+
+        cout << "\t\t逆置此循环单链表后：" << endl;
+        displayCurrentObject(myLinkList);
+    }
 
     cout << endl << "\t*************************************************" << endl << endl;
 
@@ -262,7 +273,6 @@ void ex3_2_10(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 template <typename ElemType>
 void ex3_2_11(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
-    default_random_engine engine;
     uniform_int_distribution<unsigned> uniform(0, 100);
     MyLinkList<ElemType> otherLinkList;
 
@@ -297,7 +307,6 @@ void ex3_2_12(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 template <typename ElemType>
 void ex3_2_13(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
 {
-    default_random_engine engine;
     uniform_int_distribution<unsigned> uniform(0, 100);
     ElemType e;
     myLinkList.clear();
@@ -327,8 +336,14 @@ void ex3_2_14(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
     MyLinkList<ElemType> otherLinkList = MyLinkList<ElemType>(myLinkList);
 
     cout << "\t*******************用已有的非循环单链表初始化另一个非循环单链表*******************" << endl << endl;
-    
-    displayCurrentObject(otherLinkList);
+
+    if (otherLinkList.getLength() == 0)
+        cout << "\t\t此循环单链表为空" << endl;
+    else
+    {
+        cout << "\t\t当前非循环单链表初始化另一个非循环单链表为：" << endl;
+        displayCurrentObject(otherLinkList);
+    }
 
     cout << endl << "\t*************************************************" << endl << endl;
     cout << "\t\t还继续吗（Y.继续 N.结束）？";
@@ -356,7 +371,7 @@ void ex3_2_15(MyLinkList<ElemType> & myLinkList, char & continueYesNo)
     displayCurrentObject(myLinkList);
 
     cout << endl << "\t**************************************************" << endl << endl;
-    
+
     cout << "\t\t还继续吗（Y.继续 N.结束）？";
     cin >> continueYesNo;
 }
@@ -436,9 +451,7 @@ void ex3_2_16(char & continueYesNo)
             break;
         }
     }
-
-    cout << "\t\t还继续吗（Y.继续 N.结束）？";
-    cin >> continueYesNo;
 }
+
 
 #endif //ALGORITHM_EX3_2_TEXT_H

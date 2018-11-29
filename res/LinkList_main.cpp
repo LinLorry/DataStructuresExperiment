@@ -3,15 +3,14 @@
 //
 
 #include <iostream>
-#include <cassert>
-using namespace std;
+using std::cout;
+using std::cin;
 
-#include "../include/LinkList/ex3_2_Text.h"
+#include "LinkList/ex3_2_Text.h"
 
 int main()
 {
     MyLinkList<int> myLinkList;
-
     int choose;
     char continueYesNo = 'N';
 
@@ -43,7 +42,7 @@ int main()
         cout << endl << endl;
         cout << "////////////////////////////////////////////////////////" << endl << endl;
 
-        cout << "\t请输入你要操作的代码（1-15）号码：";
+        cout << "\t请输入你要操作的代码（1-16）号码：";
         cin >> choose;
 
         if (choose > 0 && choose < 16)

@@ -12,6 +12,7 @@ class MyLinkList:public LinkList<ElemType>
 {
 public:
     void rankLinkList();
+    void mergeRepeat();
 };
 
 template <typename ElemType>
@@ -42,6 +43,30 @@ void MyLinkList<ElemType>::rankLinkList()
         }
         else
             this->head = q, q->next = NULL;
+    }
+}
+
+template <typename ElemType>
+void MyLinkList<ElemType>::mergeRepeat()
+{
+    this->rankLinkList();
+    typename MyLinkList<ElemType>::NodePointer p = this->head;
+
+
+    if (!p)
+        return;
+
+    while(p->next)
+    {
+        if (equal(p->data, p->next->data))
+        {
+            p->data = p->data + p->next->data;
+            typename MyLinkList<ElemType>::NodePointer q = p->next;
+            p->next = q->next;
+            delete q;
+        }
+        else
+            p = p->next;
     }
 }
 

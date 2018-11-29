@@ -3,7 +3,7 @@
 #include <assert.h>
 using namespace std;
 
-#include "../include/Rectangle/ex2_1_Text.h"
+#include "Rectangle/ex2_1_Text.h"
 
 int main()
 {
