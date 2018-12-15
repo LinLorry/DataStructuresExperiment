@@ -22,27 +22,31 @@ int main()
         system("clear");
         cout << endl;
         cout << "\t********************************" <<endl << endl;
-        cout << "\t\t1.判断循环单链表是否为空" << endl;
-        cout << "\t\t2.把循环单链表的头指针后移至第i个结点" << endl;
-        cout << "\t\t3.删除第i个结点，头指针移至其后下一个结点" << endl;
-        cout << "\t\t4.把一个循环单链表赋值给另一个循环单链表" << endl;
-        cout << "\t\t5.把循环单链表置空" << endl;
-        cout << "\t\t6.随机生成循环单链表" << endl;
-        cout << "\t\t7.用已有的循环单链表初始化另一个循环单链表" << endl;
-        cout << "\t\t8.输入非循环单链表" << endl;
-        cout << "\t\t9.约瑟夫环（Josephus）出列" << endl;
+        cout << "\t\t1.取循环双链表第i个结点的数据域" << endl;
+        cout << "\t\t2.在第i个结点之前插入一个数据域为e的结点" << endl;
+        cout << "\t\t3.判断循环双链表是否为空" << endl;
+        cout << "\t\t4.求循环双链表中结点的个数" << endl;
+        cout << "\t\t5.返回循环双链表中数据域为e的第一个结点的指针" << endl;
+        cout << "\t\t6.返回某结点前驱的数据域" << endl;
+        cout << "\t\t7.返回某结点后继的数据域" << endl;
+        cout << "\t\t8.删除循环双链表中数据域为e的第一个结点" << endl;
+        cout << "\t\t9.把一个循环双链表赋值给另一个循环双链表" << endl;
+        cout << "\t\t10.把循环双链表置空" << endl;
+        cout << "\t\t11.随机生成循环双链表" << endl;
+        cout << "\t\t12.用已有的循环双链表初始化另一个循环双链表" << endl;
+        cout << "\t\t13.输入非循环双链表" << endl;
         cout << "\t\t\t其他.结束" << endl << endl;
         cout << "////////////////////////////////////////////////////////" << endl;
-        displayMessage(myDoubleLinkList, "当前循环单链表为：");
+        displayMessage(myDoubleLinkList);
         cout << "////////////////////////////////////////////////////////" << endl << endl;
 
-        cout << "\t请输入你要操作的代码（1-9）号码：";
+        cout << "\t请输入你要操作的代码（1-13）号码：";
         cin >> choose;
 
-        if (choose > 0 && choose < 9)
+        if (choose > 0 && choose < 13)
         {
             system("clear");
-            displayMessage(myDoubleLinkList, "当前循环单链表为：");
+            displayMessage(myDoubleLinkList);
         }
 
         switch (choose)
@@ -73,6 +77,18 @@ int main()
                 break;
             case 9:
                 ex3_4_9(myDoubleLinkList, continueYesNo);
+                break;
+            case 10:
+                ex3_4_10(myDoubleLinkList, continueYesNo);
+                break;
+            case 11:
+                ex3_4_11(myDoubleLinkList, continueYesNo);
+                break;
+            case 12:
+                ex3_4_12(myDoubleLinkList, continueYesNo);
+                break;
+            case 13:
+                ex3_4_13(myDoubleLinkList, continueYesNo);
                 break;
             default:
                 cout << "" << endl << endl;

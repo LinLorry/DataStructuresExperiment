@@ -33,15 +33,15 @@ public:
     public:
         const_iterator() : current { nullptr } { }
 
-        virtual const Object & operator*() const { return retrieve(); }
+        const Object & operator*() const { return retrieve(); }
 
-        virtual const_iterator & operator++()
+        const_iterator & operator++()
         {
             current = current->next;
             return  *this;
         }
 
-        virtual const_iterator operator++( int )
+        const_iterator operator++( int )
         {
             const_iterator old = *this;
             ++(*this);
@@ -59,13 +59,12 @@ public:
         const_iterator(NodePointer p) : current { p } { }
 
         friend class DoubleLinkList<Object>;
-
     };
 
     class iterator : public const_iterator
     {
     public:
-        iterator()= default;
+        iterator() { }
 
         Object & operator*() { return const_iterator::retrieve(); }
         const Object & operator*() const { return const_iterator::operator*(); }
@@ -84,7 +83,7 @@ public:
         }
 
     protected:
-        iterator(NodePointer p):const_iterator { p } { }
+        iterator(NodePointer p): const_iterator { p } { }
 
         friend class DoubleLinkList<Object>;
     };
@@ -114,16 +113,17 @@ public:
             }
             else
             {
-                s = new Node(q->data, p->next, p);
+                s = new Node(q->data, p, head);
                 assert(s!=0);
 
+                p->next->prev = s;
                 p->next = s;
                 p = p->next;
             }
             ++theSize;
             q = q->next;
         }
-        while (q->next != doubleLinkList.head);
+        while (q!= doubleLinkList.head);
     }
 
     DoubleLinkList(DoubleLinkList && doubleLinkList)
@@ -149,16 +149,18 @@ public:
             }
             else
             {
-                s = new Node(q->data, p->next, p);
+                s = new Node(q->data, p, head);
                 assert(s!=0);
 
+                p->next->prev = s;
                 p->next = s;
                 p = p->next;
             }
             ++theSize;
             q = q->next;
         }
-        while (q->next != doubleLinkList.head);
+        while (q!= doubleLinkList.head);
+
     }
 
     virtual ~DoubleLinkList() { }
@@ -188,9 +190,10 @@ public:
             }
             else
             {
-                s = new Node(q->data, p->next, p);
+                s = new Node(q->data, p, head);
                 assert(s!=0);
 
+                p->next->prev = s;
                 p->next = s;
                 p = p->next;
             }
@@ -198,7 +201,7 @@ public:
             q = q->next;
 
         }
-        while (q->next != rightList.head);
+        while (q!= rightList.head);
 
         return *this;
     }
@@ -227,9 +230,10 @@ public:
             }
             else
             {
-                s = new Node(q->data, p->next, p);
+                s = new Node(q->data, p, head);
                 assert(s!=0);
 
+                p->next->prev = s;
                 p->next = s;
                 p = p->next;
             }
@@ -237,7 +241,7 @@ public:
             q = q->next;
 
         }
-        while (q->next != rightList.head);
+        while (q!= rightList.head);
 
         return *this;
     }
@@ -273,27 +277,19 @@ public:
         theSize = 0;
     }
 
-    const_iterator & insert(int i, const Object & x)
+    iterator insert(int i, const Object & x)
     {
-        auto iterator =  new const_iterator(nullptr);
-        assert(iterator!=0);
-
         NodePointer p = head;
 
-        if (i < 0) return *iterator; // If input i is error, return ERROR.
+        if (i < 0 || i > theSize) return { nullptr };
 
         if (i==0) // If input i is 0, insert a head or change head.
         {
             auto s = new Node(x);
+            assert(s != 0);
 
             if (!head) // If head is Nullptr, insert a head.
-            {
-
-                assert(s != 0);
-
-                s->next = s;
-                s->prev = s;
-            }
+                s->next = s->prev = s;
             else // If head is e, insert a Node and change head.
             {
                 s = new Node(x);
@@ -306,30 +302,25 @@ public:
                 head->prev = s;
             }
             head = s;
+            theSize++;
 
-            delete iterator;
-            iterator = const_iterator(s);
-            assert(iterator!=0);
-
-            return *iterator;
+            return begin();
         }
 
         do
             p = p->next;
-        while (--i>0 && p->next!=head);
+        while (--i>0);
 
-        if (i==0)
-        {
-            auto s = new Node(x, p->prev, p->next);
-            p->prev->next = s;
-            p->prev = s;
+        theSize++;
 
-            delete iterator;
-            iterator = new const_iterator(s);
-            assert(iterator!=0);
-        }
+        return { p->prev = p->prev->next = new Node{x, p->prev, p} };
+    }
 
-        return *iterator;
+    iterator insert(iterator itr, Object & object)
+    {
+        NodePointer p = itr.current;
+        theSize++;
+        return { p->prev = p->prev->next = new Node{object, p->prev, p} };
     }
 
     Status erase(int i, Object & object)
@@ -344,6 +335,7 @@ public:
 
             p->next->prev = p->prev;
             p->prev->next = p->next;
+            theSize--;
 
             delete p;
             return OK;
@@ -358,11 +350,28 @@ public:
         {
             p->next->prev = p->prev;
             p->prev->next = p->next;
+            theSize--;
 
             delete p;
             return OK;
         }
     }
+
+    iterator erase(iterator itr)
+    {
+        NodePointer p = itr.current;
+        iterator retVal{ p->next };
+
+        if (p == head) head = p->next;
+
+        p->prev->next = p->next;
+        p->next->prev = p->prev;
+
+        delete p;
+        theSize--;
+
+        return retVal;
+    };
 
 protected:
     NodePointer head;
