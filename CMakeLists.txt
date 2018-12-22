@@ -4,4 +4,5 @@ project(Algorithm)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(Algorithm include/myhead.h include/myhead.cpp /
-                res/DoubleLinkList_main.cpp res/DoubleLinkList/DoubleLinkList.h res/DoubleLinkList/ex3_4_Text.h res/DoubleLinkList/MyDoubleLinkList.h)
+        res/SqStack_main.cpp / res/SqStack/ex4_1_Text.h res/SqStack/SqStack.h /
+        res/SqStack/Expression_SqStack.cpp res/SqStack/Expression_SqStack.h)

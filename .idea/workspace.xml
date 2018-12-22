@@ -11,11 +11,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7febc13-a54e-428a-97c8-0909d17f647f" name="Default Changelist" comment="">
+    <list default="true" id="f7febc13-a54e-428a-97c8-0909d17f647f" name="Default Changelist" comment="Finish SqStack and SqStack about Expression.">
+      <change afterPath="$PROJECT_DIR$/res/Models/Expression.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Models/Expression.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/SqStack/Expression_SqStack.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/SqStack/Expression_SqStack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/SqStack/SqStack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/SqStack/ex4_1_Text.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/SqStack_main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/DoubleLinkList/DoubleLinkList.h" beforeDir="false" afterPath="$PROJECT_DIR$/res/DoubleLinkList/DoubleLinkList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/DoubleLinkList/ex3_4_Text.h" beforeDir="false" afterPath="$PROJECT_DIR$/res/DoubleLinkList/ex3_4_Text.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/DoubleLinkList_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/res/DoubleLinkList_main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,42 +104,46 @@
     <session id="-713417182">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.31" value="3" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.31" value="5" />
           <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Algorithm (disassembly)" value="3" />
+          <entry key="Algorithm (disassembly)" value="6" />
           <entry key="cmake" value="1" />
-          <entry key="cpp" value="4" />
-          <entry key="h" value="25" />
-          <entry key="txt" value="1" />
+          <entry key="cpp" value="12" />
+          <entry key="h" value="51" />
+          <entry key="txt" value="3" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="2" />
-          <entry key="Disassembly" value="3" />
-          <entry key="ObjectiveC" value="29" />
+          <entry key="CMakeLists.txt" value="4" />
+          <entry key="Disassembly" value="6" />
+          <entry key="ObjectiveC" value="63" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="250" />
-          <entry key="h" value="5894" />
-          <entry key="txt" value="23" />
+          <entry key="cpp" value="4692" />
+          <entry key="h" value="10320" />
+          <entry key="txt" value="109" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="6144" />
-          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="CMakeLists.txt" value="14" />
+          <entry key="ObjectiveC" value="15012" />
+          <entry key="PLAIN_TEXT" value="95" />
         </counts>
       </usages-collector>
     </session>
@@ -145,19 +154,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/DoubleLinkList_main.cpp">
+        <entry file="file://$PROJECT_DIR$/res/SqStack_main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-354">
-              <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+            <state relative-caret-position="1317">
+              <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+              <folding>
+                <element signature="e#40#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/DoubleLinkList/ex3_4_Text.h">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/SqStack/ex4_1_Text.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1383">
-              <caret line="383" column="51" selection-start-line="383" selection-start-column="51" selection-end-line="383" selection-end-column="51" />
+            <state relative-caret-position="5258">
+              <caret line="239" column="21" selection-start-line="239" selection-start-column="21" selection-end-line="239" selection-end-column="21" />
               <folding>
                 <element signature="e#39#56#0" expanded="true" />
               </folding>
@@ -166,31 +178,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/LinkList/ex3_2_Text.h">
+        <entry file="file://$PROJECT_DIR$/res/SqStack/Expression_SqStack.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="343" column="43" selection-start-line="343" selection-start-column="21" selection-end-line="343" selection-end-column="43" />
+            <state relative-caret-position="165">
+              <caret line="13" column="54" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/DoubleLinkList/DoubleLinkList.h">
+        <entry file="file://$PROJECT_DIR$/res/SqStack/Expression_SqStack.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1087">
-              <caret line="291" column="16" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="16" />
+            <state relative-caret-position="165">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
               <folding>
-                <element signature="e#39#57#0" expanded="true" />
+                <element signature="e#40#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/myhead.h">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="154">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/Models/Expression.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/Models/Expression.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <folding>
+                <element signature="e#39#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/SqStack/SqStack.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+              <folding>
+                <element signature="e#40#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,8 +244,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>template &lt;typename ElemType&gt;</find>
-      <find>Stu</find>
       <find>Studentdent</find>
       <find>.id</find>
       <find>.name</find>
@@ -229,6 +272,8 @@
       <find>displayMessage</find>
       <find>ins</find>
       <find>eng</find>
+      <find>myDoubleLinkList</find>
+      <find>iterator</find>
     </findStrings>
     <replaceStrings>
       <replace>\t</replace>
@@ -246,6 +291,8 @@
       <replace>MyTerm</replace>
       <replace>Term</replace>
       <replace>nullptr</replace>
+      <replace>sqStack</replace>
+      <replace>itr</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -260,16 +307,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/include/Fun.h" />
-        <option value="$PROJECT_DIR$/include/MySetSqList.h" />
-        <option value="$PROJECT_DIR$/include/MySqList.h" />
-        <option value="$PROJECT_DIR$/include/ss.h" />
-        <option value="$PROJECT_DIR$/res/Student.cpp" />
-        <option value="$PROJECT_DIR$/include/Student.h" />
-        <option value="$PROJECT_DIR$/include/SqList.h" />
-        <option value="$PROJECT_DIR$/include/ex3_1_Text.h" />
-        <option value="$PROJECT_DIR$/include/SqList/SqList.h" />
-        <option value="$PROJECT_DIR$/include/Rectangle/ex2_1_Text.h" />
         <option value="$PROJECT_DIR$/include/LinkList/MyTerm.cpp" />
         <option value="$PROJECT_DIR$/include/LinkList/MyTerm.h" />
         <option value="$PROJECT_DIR$/include/Student_SqList.h" />
@@ -306,11 +343,21 @@
         <option value="$PROJECT_DIR$/res/CircularLinkList_main.cpp" />
         <option value="$PROJECT_DIR$/res/CircularLinkList/ex3_3_Text.h" />
         <option value="$PROJECT_DIR$/res/CircularLinkList/CircularLinkList.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/res/DoubleLinkList/MyDoubleLinkList.h" />
         <option value="$PROJECT_DIR$/res/DoubleLinkList/DoubleLinkList.h" />
         <option value="$PROJECT_DIR$/res/DoubleLinkList_main.cpp" />
         <option value="$PROJECT_DIR$/res/DoubleLinkList/ex3_4_Text.h" />
+        <option value="$PROJECT_DIR$/res/SqStack/SqStack.h" />
+        <option value="$PROJECT_DIR$/res/SqList/ex3_1_Text.h" />
+        <option value="$PROJECT_DIR$/res/SqStack/SuffixStack.h" />
+        <option value="$PROJECT_DIR$/res/Models/Expression.h" />
+        <option value="$PROJECT_DIR$/res/Models/Expression.cpp" />
+        <option value="$PROJECT_DIR$/res/SqStack/SuffixStack.cpp" />
+        <option value="$PROJECT_DIR$/res/SqStack/ex4_1_Text.h" />
+        <option value="$PROJECT_DIR$/res/SqStack_main.cpp" />
+        <option value="$PROJECT_DIR$/res/SqStack/Expression_SqStack.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/res/SqStack/Expression_SqStack.cpp" />
       </list>
     </option>
   </component>
@@ -333,6 +380,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -349,13 +397,13 @@
               <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructuresExperiment" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="DoubleLinkList" type="462c0819:PsiDirectoryNode" />
+              <item name="CircularLinkList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructuresExperiment" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="LinkList" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
@@ -363,11 +411,16 @@
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="SqList" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresExperiment" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="SqStack" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -458,7 +511,12 @@
       <workItem from="1544421507548" duration="3028000" />
       <workItem from="1544451227337" duration="49000" />
       <workItem from="1544752224886" duration="8063000" />
-      <workItem from="1544865788702" duration="7722000" />
+      <workItem from="1544865788702" duration="15535000" />
+      <workItem from="1545216219660" duration="3607000" />
+      <workItem from="1545272649473" duration="12314000" />
+      <workItem from="1545448747585" duration="6491000" />
+      <workItem from="1545469667552" duration="597000" />
+      <workItem from="1545475171729" duration="1871000" />
     </task>
     <task id="LOCAL-00001" summary="Add LinkList Text and change some other Text.">
       <created>1541779060791</created>
@@ -516,11 +574,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544424506915</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finish Double Link List.">
+      <created>1544875391747</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1544875391747</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174849000" />
+    <option name="totallyTimeSpent" value="207542000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -537,18 +602,18 @@
       <window_info id="Repositories" order="0" weight="0.1895811" />
       <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.28249195" />
       <window_info id="Favorites" order="2" sideWeight="0.5008347" side_tool="true" weight="0.28249195" />
-      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49916527" visible="true" weight="0.15306123" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49916527" visible="true" weight="0.16380237" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48764768" weight="0.69878185" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48711064" weight="0.69878185" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49946293" weight="0.7807309" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.4989259" weight="0.58914727" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32890365" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.48979592" weight="0.37430787" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" sideWeight="0.48818475" visible="true" weight="0.37430787" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49785176" weight="0.32890365" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053704" side_tool="true" weight="0.807309" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50107414" side_tool="true" weight="0.58914727" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4924812" weight="0.337763" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32779622" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -558,22 +623,22 @@
     </layout>
     <layout-to-restore>
       <window_info id="Repositories" order="0" weight="0.1895811" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.26369494" />
+      <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.28249195" />
+      <window_info id="Favorites" order="2" sideWeight="0.5008347" side_tool="true" weight="0.28249195" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49916527" visible="true" weight="0.15735768" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32930845" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48764768" weight="0.69878185" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6223699" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48711064" weight="0.69878185" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49946293" weight="0.58914727" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32890365" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" sideWeight="0.48979592" visible="true" weight="0.37430787" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4989259" weight="0.32890365" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5064447" side_tool="true" weight="0.33222592" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4935553" weight="0.33444077" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.32890365" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.48979592" weight="0.37430787" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49785176" weight="0.32890365" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5128894" side_tool="true" weight="0.69878185" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4924812" weight="0.337763" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32779622" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -613,7 +678,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Add LinkList Text and change some other Text." />
     <MESSAGE value="Update LinkList" />
     <MESSAGE value="fix the LinkList insert bug" />
@@ -622,47 +686,11 @@
     <MESSAGE value="Finish LinkList." />
     <MESSAGE value="Finish CircularLinkList." />
     <MESSAGE value="Add Double Link List." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Double Link List." />
+    <MESSAGE value="Finish Double Link List." />
+    <MESSAGE value="Finish SqStack and SqStack about Expression." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish SqStack and SqStack about Expression." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/Rectangle/MyExampleClass.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="40" column="68" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/8.2.1/bits/stl_algobase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="1038" column="47" selection-start-line="1038" selection-start-column="47" selection-end-line="1038" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/Fun.h" />
-    <entry file="file://$PROJECT_DIR$/include/ss.cpp" />
-    <entry file="file://$PROJECT_DIR$/include/ss.h" />
-    <entry file="file://$PROJECT_DIR$/res/Rectangle/ex2_1_Text.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/SqList/MySetSqList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Rectangle/ExampleClass.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/LinkList/LinkNode.cpp" />
     <entry file="file://$PROJECT_DIR$/include/LinkList/LinkNode.h" />
     <entry file="file:///usr/include/gdpp.h">
@@ -674,20 +702,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/MyTerm.cpp" />
     <entry file="file://$PROJECT_DIR$/include/MyTerm.h" />
-    <entry file="file://$PROJECT_DIR$/res/SqList/MySqList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/SqList/Student_SqList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/SqList_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -712,24 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/Models/Student.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/Models/Term.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/SqList/SqList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3234">
-          <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -744,13 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Models/Term.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -777,20 +770,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.ii/workspace.xml" />
     <entry file="file://$PROJECT_DIR$/.ii/vcs.xml" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/CircularLinkList/CircularLinkList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3300">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/CircularLinkList_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -817,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/myhead.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/8.2.1/bits/uniform_int_dist.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -835,9 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#153#170#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,13 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/SqList/ex3_1_Text.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3949">
-          <caret line="403" column="55" selection-start-line="403" selection-start-column="55" selection-end-line="403" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/LinkList/ex3_2_Text.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -862,29 +824,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/DoubleLinkList/DoubleLinkList.h">
+    <entry file="file://$PROJECT_DIR$/res/DoubleLinkList_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1087">
-          <caret line="291" column="16" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="16" />
-          <folding>
-            <element signature="e#39#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="350">
+          <caret line="99" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="99" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/DoubleLinkList_main.cpp">
+    <entry file="file://$PROJECT_DIR$/include/myhead.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-354">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        <state relative-caret-position="173">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/DoubleLinkList/DoubleLinkList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5588">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/Models/Term.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/DoubleLinkList/ex3_4_Text.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1383">
-          <caret line="383" column="51" selection-start-line="383" selection-start-column="51" selection-end-line="383" selection-end-column="51" />
+        <state relative-caret-position="2970">
+          <caret line="135" column="32" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqList/SqList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3234">
+          <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqList/ex3_1_Text.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9108">
+          <caret line="414" column="25" selection-start-line="414" selection-start-column="25" selection-end-line="414" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/Models/Student.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqList/Student_SqList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5632">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqList/MySetSqList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqList/MySqList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/CircularLinkList/CircularLinkList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2800">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8.2.1/bits/basic_string.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2090">
+          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqStack/SuffixStack.cpp" />
+    <entry file="file://$PROJECT_DIR$/res/SqStack/SuffixStack.h" />
+    <entry file="file:///usr/include/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/Models/Expression.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding>
+            <element signature="e#39#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqStack_main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1317">
+          <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqStack/Expression_SqStack.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqStack/ex4_1_Text.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5258">
+          <caret line="239" column="21" selection-start-line="239" selection-start-column="21" selection-end-line="239" selection-end-column="21" />
           <folding>
             <element signature="e#39#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/Models/Expression.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqStack/Expression_SqStack.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/SqStack/SqStack.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding>
+            <element signature="e#40#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
