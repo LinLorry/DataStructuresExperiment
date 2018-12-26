@@ -30,7 +30,7 @@ void displayCurrentObject(const SqStack<Object> & sqStack)
     cout << endl << "\t\t↑";
     for(int i=1; i<size; ++i) cout << "\t";
 
-    cout << "↑" << endl << "\t  base";
+    cout << "↑" << endl << "\t\tbase";
     for(int i=1; i<size; ++i) cout << "\t";
     cout << "top";
 }

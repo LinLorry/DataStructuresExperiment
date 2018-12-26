@@ -42,7 +42,7 @@ int main()
         cout << "\t请输入你要操作的代码（1-11）号码：";
         cin >> choose;
 
-        if (choose > 0 && choose < 11)
+        if (choose > 0 && choose < 12)
         {
             system("clear");
             displayMessage(sqStack);

@@ -38,10 +38,10 @@ int main()
         displayMessage(linkStack);
         cout << "////////////////////////////////////////////////////////" << endl << endl;
 
-        cout << "\t请输入你要操作的代码（1-11）号码：";
+        cout << "\t请输入你要操作的代码（1-9）号码：";
         cin >> choose;
 
-        if (choose > 0 && choose < 9)
+        if (choose > 0 && choose < 10)
         {
             system("clear");
             displayMessage(linkStack);
