@@ -4,4 +4,4 @@ project(Algorithm)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(Algorithm include/myhead.h include/myhead.cpp
-        res/Sorting_main.cpp res/Sorting/SortingExperiment.cpp res/Sorting/SortingExperiment.h)
+        res/BiTree_main.cpp res/BiTree/ex9_1_Text.h res/BiTree/BiTree.h)

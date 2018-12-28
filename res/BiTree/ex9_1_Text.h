@@ -50,16 +50,20 @@ public:
             system("clear");
             cout << endl;
             cout << "\t********************************" <<endl << endl;
-            cout << "\t\t1.进队列" << endl;
-            cout << "\t\t2.出队列" << endl;
-            cout << "\t\t3.读非循环链队头结点的数据域" << endl;
-            cout << "\t\t4.判断非循环链队是否为空" << endl;
-            cout << "\t\t5.求非循环链队中元素的个数" << endl;
-            cout << "\t\t6.把一个非循环链队赋值给另一个非循环链队" << endl;
-            cout << "\t\t7.把非循环链队置空" << endl;
-            cout << "\t\t8.随机生成非循环链队" << endl;
-            cout << "\t\t9.用已有的非循环链队初始化另一个非循环链队" << endl;
-            cout << "\t\t10.停车场管理" << endl;
+            cout << "\t\t1.求二叉树的结点数" << endl;
+            cout << "\t\t2.求二叉树的叶子数" << endl;
+            cout << "\t\t3.递归求二叉树的深度" << endl;
+            cout << "\t\t4.交换二叉树的所有结点的左右子树" << endl;
+            cout << "\t\t5.前序递归遍历二叉树" << endl;
+            cout << "\t\t6.中序递归遍历二叉树" << endl;
+            cout << "\t\t7.后序递归遍历二叉树" << endl;
+            cout << "\t\t8.非递归中序遍历二叉树" << endl;
+            cout << "\t\t9.按层次顺序遍历二叉树" << endl;
+            cout << "\t\t10.以顺序存储的方式显示二叉树" << endl;
+            cout << "\t\t11.二叉树的二叉链表存储转换为顺序存储结构" << endl;
+            cout << "\t\t12.二叉树的顺序存储转换为二叉链表存储结构" << endl;
+            cout << "\t\t13.随机生成二叉树" << endl;
+            cout << "\t\t14.输入二叉树" << endl;
             cout << "\t\t\t其他.结束" << endl << endl;
             cout << "////////////////////////////////////////////////////////" << endl;
             displayMessage();
@@ -181,7 +185,7 @@ private:
 
     void countBiTreeNode()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************求二叉树的结点数*******************" << endl << endl;
 
         int node = biTree.countNode();
         cout << "\t\t当前二叉树的结点数为：" << node << endl << endl;
@@ -194,7 +198,7 @@ private:
 
     void countBiTreeLeaf()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************求二叉树的叶子数*******************" << endl << endl;
 
         int leaf = biTree.countLeaf();
         cout << "\t\t当前二叉树的叶子数为：" << leaf << endl << endl;
@@ -207,7 +211,7 @@ private:
 
     void getBiTreeDepth()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************递归求二叉树的深度*******************" << endl << endl;
 
         int depth = biTree.depth();
         cout << "\t\t当前二叉树的深度为：" << depth << endl << endl;
@@ -220,7 +224,7 @@ private:
 
     void exchangeBiTreeLeftRight()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************交换二叉树的所有结点的左右子树*******************" << endl << endl;
 
         biTree.exchangeLeftRight();
 
@@ -234,7 +238,7 @@ private:
 
     void preOrderTraverseBiTree()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************前序递归遍历二叉树*******************" << endl << endl;
 
         string str = biTree.preOrderTraverse();
 
@@ -248,7 +252,7 @@ private:
 
     void infixOrderTraverseBiTree()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************中序递归遍历二叉树*******************" << endl << endl;
 
         string str = biTree.infixOrderTraverse();
 
@@ -262,7 +266,7 @@ private:
 
     void afterOrderTraverseBiTree()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************后序递归遍历二叉树*******************" << endl << endl;
 
         string str = biTree.afterOrderTraverse();
 
@@ -276,7 +280,7 @@ private:
 
     void nonRecursiveInfixOrderTraverseBiTree()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************非递归中序遍历二叉树*******************" << endl << endl;
 
         string str = biTree.nonRecursiveInfixOrderTraverse();
 
@@ -290,7 +294,7 @@ private:
 
     void traverseBiTree()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************按层次顺序遍历二叉树*******************" << endl << endl;
 
         string str = biTree.traverse();
 
@@ -304,9 +308,9 @@ private:
 
     void printBiTreeVector()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************以顺序存储的方式显示二叉树*******************" << endl << endl;
 
-        cout << "\t\t" << endl;
+        cout << "\t\t当前二叉树顺序存储为" << endl;
         printVector(biTree.getVector());
         cout << endl;
 
@@ -318,9 +322,9 @@ private:
 
     void transBiTreeVector()
     {
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************二叉树的二叉链表存储转换为顺序存储结构*******************" << endl << endl;
 
-        cout << "\t\t" << endl;
+        cout << "\t\t当前二叉树已转化为如下的顺序存储结构" << endl;
         printVector(biTree.getVector());
         cout << endl;
 
@@ -336,10 +340,14 @@ private:
         Object object;
         vector<Object> v;
 
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************二叉树的顺序存储转换为二叉链表存储结构*******************" << endl << endl;
 
-        cout << "\t\t" << endl;
+        cout << "\t\t输入一颗顺序存储的二叉树：" << endl <<
+            "\t\t请输入要输入多少个结点：";
+
         cin >> num;
+
+        cout << endl << "\t\t按层次顺序输入树的各结点：" << endl;
 
         for (int i=0; i<num; ++i)
         {
@@ -349,8 +357,9 @@ private:
 
         biTree.setFromVector(v);
 
-        printVector(v);
-        displayMessage("");
+        cout << "\t\t该树的顺序输出为：" << endl;
+        printVector(biTree.getVector());
+        displayMessage("上面二叉树的顺序存储转换为二叉链表存储结构如下：");
 
         cout << "\t**********************************************" << endl << endl;
 
@@ -363,6 +372,8 @@ private:
         uniform_int_distribution<unsigned> uniform(5, 10);
         int n = uniform(engine);
 
+        cout << "\t*******************随机生成二叉树*******************" << endl << endl;
+
         vector<Object> v;
 
         for(int i=0; i<n; ++i, ++id)
@@ -370,8 +381,17 @@ private:
             v.push_back(id);
         }
 
-        biTree.clear();
         biTree.setFromVector(v);
+
+        cout << "\t\t该树的顺序存储输出为：" << endl;
+        printVector(biTree.getVector());
+
+        displayMessage("随机生成的二叉树为：");
+
+        cout << "\t**********************************************" << endl << endl;
+
+        cout << "\t\t还继续吗（Y.继续 N.结束）？";
+        cin >> this->continueYesNo;
     }
 
     void inputBiTree()
@@ -380,10 +400,14 @@ private:
         Object object;
         vector<Object> v;
 
-        cout << "\t*******************判断非循环链队是否为空*******************" << endl << endl;
+        cout << "\t*******************输入二叉树*******************" << endl << endl;
 
-        cout << "\t\t" << endl;
+        cout << "\t\t采用顺序存储创建一个二叉树：" << endl <<
+             "\t\t请输入要输入多少个结点：";
+
         cin >> num;
+
+        cout << endl << "\t\t按层次顺序输入树的各结点：" << endl;
 
         for (int i=0; i<num; ++i)
         {
@@ -393,8 +417,9 @@ private:
 
         biTree.setFromVector(v);
 
-        printVector(v);
-        displayMessage("");
+        cout << "\t\t该树的顺序输出为：" << endl;
+        printVector(biTree.getVector());
+        displayMessage("输入的二叉树为：");
 
         cout << "\t**********************************************" << endl << endl;
 
