@@ -130,6 +130,30 @@ void SortingExperiment::displayCurrentObject() const
 
 void SortingExperiment::insertSort()
 {
+    list<double> otherList;
+    unsigned long size = v.size();
+
+    for(int i=1; i<size; ++i) // 从数组
+    {
+        for(int j=i-1; j>=0; --j)
+        {
+            if (v[i] > v[j] || j==0)
+            {
+                double x = v[i];
+
+                for (int z=i-1; z>=j; --z)
+                {
+                    v[z+1] = v[z];
+                }
+
+                v[j+1] = x;
+
+                break;
+            }
+        }
+
+        displayMessage();
+    }
 
 }
 

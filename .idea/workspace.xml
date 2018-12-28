@@ -12,11 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7febc13-a54e-428a-97c8-0909d17f647f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/res/Sorting/SortingExperiment.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Sorting/SortingExperiment.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Sorting_main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Sorting/SortingExperiment.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/res/Sorting/SortingExperiment.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,7 +97,7 @@
     <session id="-713417182">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.29" value="2" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.31" value="8" />
@@ -115,7 +112,7 @@
         <counts>
           <entry key="Algorithm (disassembly)" value="24" />
           <entry key="cmake" value="1" />
-          <entry key="cpp" value="41" />
+          <entry key="cpp" value="42" />
           <entry key="h" value="137" />
           <entry key="istream" value="2" />
           <entry key="random" value="1" />
@@ -128,22 +125,22 @@
         <counts>
           <entry key="CMakeLists.txt" value="7" />
           <entry key="Disassembly" value="24" />
-          <entry key="ObjectiveC" value="182" />
+          <entry key="ObjectiveC" value="183" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="8660" />
+          <entry key="cpp" value="8962" />
           <entry key="h" value="24426" />
-          <entry key="txt" value="189" />
+          <entry key="txt" value="190" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="32" />
-          <entry key="ObjectiveC" value="33086" />
-          <entry key="PLAIN_TEXT" value="157" />
+          <entry key="ObjectiveC" value="33388" />
+          <entry key="PLAIN_TEXT" value="158" />
         </counts>
       </usages-collector>
     </session>
@@ -153,26 +150,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/Sorting/SortingExperiment.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/BiTree_main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="203">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#40#57#0" expanded="true" />
-                <element signature="e#365#405#0" />
-                <element signature="e#2633#2727#0" />
-                <element signature="e#2932#2989#0" />
+                <element signature="e#40#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/Sorting/SortingExperiment.h">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/Sorting/SortingExperiment.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="905">
+              <caret line="148" column="27" lean-forward="true" selection-start-line="148" selection-start-column="27" selection-end-line="148" selection-end-column="27" />
               <folding>
                 <element signature="e#40#57#0" expanded="true" />
               </folding>
@@ -327,6 +321,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,13 +338,12 @@
               <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructuresExperiment" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="SqList" type="462c0819:PsiDirectoryNode" />
+              <item name="SqStack" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,7 +445,7 @@
       <workItem from="1545834852061" duration="3709000" />
       <workItem from="1545877229652" duration="23946000" />
       <workItem from="1545903793513" duration="606000" />
-      <workItem from="1545909703569" duration="13944000" />
+      <workItem from="1545909703569" duration="14336000" />
     </task>
     <task id="LOCAL-00001" summary="Add LinkList Text and change some other Text.">
       <created>1541779060791</created>
@@ -544,11 +538,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545924211542</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add Sorting.">
+      <created>1545927461129</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1545927461129</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280131000" />
+    <option name="totallyTimeSpent" value="281785000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -566,7 +567,7 @@
       <window_info id="Repositories" order="0" weight="0.1895811" />
       <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.28249195" />
       <window_info id="Favorites" order="2" sideWeight="0.5008347" side_tool="true" weight="0.28249195" />
-      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49916527" visible="true" weight="0.1772288" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49916527" visible="true" weight="0.17991407" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48657358" weight="0.69878185" />
@@ -575,10 +576,10 @@
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49785176" weight="0.55370986" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32890365" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" sideWeight="0.48818475" visible="true" weight="0.38427463" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.48818475" weight="0.38427463" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49785176" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021482" side_tool="true" weight="0.55370986" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4924812" weight="0.34219268" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" sideWeight="0.4924812" visible="true" weight="0.34219268" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32779622" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -656,7 +657,8 @@
     <MESSAGE value="Get some change to Finish." />
     <MESSAGE value="Finish Link Queue." />
     <MESSAGE value="Add BiTree." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add BiTree." />
+    <MESSAGE value="Add Sorting." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Sorting." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/Models/Expression.h">
@@ -917,9 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#334#351#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -934,16 +933,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-          <folding>
-            <element signature="e#40#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/BiTree_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        <state relative-caret-position="203">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#40#59#0" expanded="true" />
           </folding>
@@ -975,9 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="123" column="105" selection-start-line="123" selection-start-column="105" selection-end-line="123" selection-end-column="105" />
-          <folding>
-            <element signature="e#40#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,10 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="134" selection-start-line="134" selection-end-line="141" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#56#0" expanded="true" />
-            <element signature="e#386#403#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,8 +997,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/Sorting/SortingExperiment.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="238">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#40#57#0" expanded="true" />
           </folding>
@@ -1018,13 +1007,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/Sorting/SortingExperiment.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="905">
+          <caret line="148" column="27" lean-forward="true" selection-start-line="148" selection-start-column="27" selection-end-line="148" selection-end-column="27" />
           <folding>
             <element signature="e#40#57#0" expanded="true" />
-            <element signature="e#365#405#0" />
-            <element signature="e#2633#2727#0" />
-            <element signature="e#2932#2989#0" />
           </folding>
         </state>
       </provider>
